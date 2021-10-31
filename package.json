@@ -41,7 +41,6 @@
   },
   "np": {
     "yarn": false,
-    "contents": "dist",
     "tests": false
   },
   "eslintConfig": {
