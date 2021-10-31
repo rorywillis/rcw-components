@@ -33,10 +33,7 @@ const theme = extendTheme({
 });
 
 addDecorator((storyFn) => (
-  <ThemeProvider>
-    <CSSReset />
-    <ChakraProvider theme={theme}>
-      <Router>{storyFn()}</Router>
-    </ChakraProvider>
-  </ThemeProvider>
+  <ChakraProvider theme={theme}>
+    <Router>{storyFn()}</Router>
+  </ChakraProvider>
 ));
