@@ -28,9 +28,10 @@
   },
   "scripts": {
     "start": "start-storybook -p 6006 -s public",
+    "build": "rm -rf ./dist && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__",
     "storybook:build": "rm -rf ./dist && tsc && build-storybook --output-dir ./docs",
     "storybook:deploy": "npm run storybook:build && gh-pages -d docs && rm -rf ./docs",
-    "npm:publish": "np"
+    "npm:publish": "npm run build && np"
   },
   "np": {
     "yarn": false,

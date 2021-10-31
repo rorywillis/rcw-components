@@ -8,8 +8,8 @@ A collection of components & hooks based on Chakra UI.
 
 ### Start Local Dev
 
-1. Run `npm install`
-2. Run `npm run start`
+1. `npm install`
+2. `npm run start`
 
 ### Deploy Storybook
 
@@ -18,6 +18,10 @@ Run `npm run storybook:deploy`
 ### Build Storybook
 
 Run `npm run storybook:build`
+
+### Build Package
+
+Run `npm run build`
 
 ### Publish Package
 
