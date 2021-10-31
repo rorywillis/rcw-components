@@ -20,7 +20,7 @@ const WithLink = (props: WithLinkProps) =>
   );
 
 const Card = (props: CardProps) => {
-  const { title, padding, url, spacing, width = "100%" } = props;
+  const { title, padding, url, spacing, ...rest } = props;
 
   return (
     <Box
@@ -30,7 +30,7 @@ const Card = (props: CardProps) => {
       rounded={"md"}
       borderWidth={1}
       overflow={"hidden"}
-      width={width}
+      {...rest}
     >
       <WithLink url={url}>
         {props.img && (
