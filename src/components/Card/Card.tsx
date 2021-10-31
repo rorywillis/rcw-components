@@ -37,7 +37,7 @@ const Card = (props: CardProps) => {
             <Image w={"100%"} objectFit="cover" src={props.img} fit={"fill"} />
           </AspectRatio>
         )}
-        <Stack p={padding ?? 4} spacing={spacing ?? 2} w={"100%"}>
+        <Stack p={padding || p || 4} spacing={spacing ?? 2} w={"100%"}>
           {title && (
             <Box fontWeight={"semibold"} fontSize={"lg"} noOfLines={2}>
               {title}
