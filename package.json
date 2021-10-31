@@ -35,7 +35,8 @@
   },
   "np": {
     "yarn": false,
-    "tests": false
+    "tests": false,
+    "no-release-draft": true
   },
   "eslintConfig": {
     "extends": [
