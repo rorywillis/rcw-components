@@ -19,8 +19,8 @@
     "isolatedModules": false,
     "jsx": "react-jsx",
     "outDir": "dist",
+    "emitDeclarationOnly": true,
     "declaration": true,
-    "noEmit": true
   },
   "include": [
     "src/components/index.ts"
