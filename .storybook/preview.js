@@ -1,5 +1,5 @@
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { ChakraProvider, extendTheme, CSSReset } from "@chakra-ui/react";
+import { BrowserRouter as Router } from "react-router-dom";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -29,6 +29,7 @@ const theme = extendTheme({
 export const decorators = [
   (Story) => (
     <ChakraProvider theme={theme}>
+      <CSSReset />
       <Router>
         <Story />
       </Router>
