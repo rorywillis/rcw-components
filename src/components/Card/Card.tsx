@@ -8,26 +8,16 @@ import {
   AspectRatio,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import { CardProps, WithLinkProps } from "../types";
 
-interface CardProps {
-  children: React.ReactNode;
-  title?: string;
-  img?: string;
-  url?: string;
-  spacing?: number;
-  padding?: number;
-}
-
-interface WithLinkProps {
-    url?: string;
-    children: React.ReactNode;
-}
-
-const WithLink = (props: WithLinkProps) => props.url ?
+const WithLink = (props: WithLinkProps) =>
+  props.url ? (
     <LinkOverlay as={Link} to={props.url}>
       {props.children}
     </LinkOverlay>
-    : <Box>{props.children}</Box>;
+  ) : (
+    <Box>{props.children}</Box>
+  );
 
 const Card = (props: CardProps) => {
   const { title, padding, url, spacing } = props;
@@ -48,7 +38,11 @@ const Card = (props: CardProps) => {
           </AspectRatio>
         )}
         <Stack p={padding ?? 4} spacing={spacing ?? 2}>
-            {title && <Box fontWeight={'semibold'} fontSize={'lg'} noOfLines={2}>{title}</Box>}
+          {title && (
+            <Box fontWeight={"semibold"} fontSize={"lg"} noOfLines={2}>
+              {title}
+            </Box>
+          )}
           {props.children}
         </Stack>
       </WithLink>

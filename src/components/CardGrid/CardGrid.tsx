@@ -1,22 +1,9 @@
 import React from "react";
-import { SimpleGrid, Box } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
 import Card from "../Card";
+import { CardGridProps } from "../types";
 
-interface CardGridItem {
-  key: string;
-  children: React.ReactNode;
-  title?: string;
-  img?: string;
-  url?: string;
-  spacing?: number;
-  padding?: number;
-}
-
-interface Props {
-  items: CardGridItem[];
-}
-
-const CardGrid = (props: Props) => {
+const CardGrid = (props: CardGridProps) => {
   const { items } = props;
 
   if (!items) {
