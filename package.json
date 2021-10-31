@@ -37,7 +37,7 @@
     "predeploy": "npm run build-storybook",
     "deploy-storybook": "npm run build-storybook && gh-pages -d storybook-static",
     "build-storybook": "rm -rf ./dist && tsc && build-storybook",
-    "publish": "np"
+    "npm-publish": "np"
   },
   "np": {
     "yarn": false,
