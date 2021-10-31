@@ -11,7 +11,7 @@
     "type": "git",
     "url": "https://github.com/rorywillis/rcw-components.git"
   },
-  "main": "dist/index.js",
+  "main": "dist/index.ts",
   "types": "dist/index.d.ts",
   "dependencies": {
     "@chakra-ui/react": "^1.6.10",
@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "start-storybook -p 6006 -s public",
-    "build": "rm -rf ./dist && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__ && tsc -d --declarationDir dist --declarationMap --emitDeclarationOnly",
+    "build": "rm -rf ./dist && tsc -d --declarationDir dist --declarationMap --emitDeclarationOnly && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__",
     "storybook:build": "rm -rf ./dist && tsc && build-storybook --output-dir ./docs",
     "storybook:deploy": "npm run storybook:build && gh-pages -d docs && rm -rf ./docs",
     "npm:publish": "npm run build && np"
