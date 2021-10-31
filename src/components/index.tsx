@@ -1,4 +1,4 @@
-import { Card } from "../../dist/index.js";
+import { Card } from "../../dist";
 
 const Test = () => {
   return <Card>Test</Card>;

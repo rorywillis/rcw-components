@@ -17,8 +17,6 @@ module.exports = {
   output: {
     filename: "index.js",
     path: path.resolve(__dirname, "dist/esm"),
-    library: "LIB",
-    libraryTarget: "var",
   },
-  plugins: [new EsmWebpackPlugin()],
+  // plugins: [new EsmWebpackPlugin()],
 };

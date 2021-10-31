@@ -19,14 +19,18 @@
     "isolatedModules": false,
     "jsx": "react-jsx",
     "outDir": "dist",
-    "emitDeclarationOnly": true,
-    "declaration": true,
+    "emitDeclarationOnly": false,
+    "declaration": false,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
+    "sourceMap": true,
   },
+  "include": [
+    "src/components/index.ts"
+  ],
   "exclude": [
     "node_modules"
   ]

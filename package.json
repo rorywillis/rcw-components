@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "start-storybook -p 6006 -s public",
-    "build": "rm -rf ./dist && webpack && tsc ./dist/esm/index.js --outDir ./dist --declaration --jsx react-jsx --esModuleInterop true --declarationMap --allowJs && rm -rf ./dist/esm",
+    "build": "rm -rf ./dist && tsc",
     "storybook:build": "rm -rf ./dist && tsc && build-storybook --output-dir ./docs",
     "storybook:deploy": "npm run storybook:build && gh-pages -d docs && rm -rf ./docs",
     "npm:publish": "np"

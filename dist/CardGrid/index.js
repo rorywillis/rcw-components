@@ -1,4 +1,3 @@
-import Card from "./Card";
 import CardGrid from "./CardGrid";
-export { Card, CardGrid, };
+export default CardGrid;
 //# sourceMappingURL=index.js.map
