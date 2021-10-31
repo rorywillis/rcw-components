@@ -29,7 +29,7 @@
   "scripts": {
     "start": "start-storybook -p 6006 -s public",
     "storybook:build": "rm -rf ./dist && tsc && build-storybook --output-dir ./docs",
-    "storybook:deploy": "npm run storybook:build && gh-pages -d docs",
+    "storybook:deploy": "npm run storybook:build && gh-pages -d docs && rm -rf ./docs",
     "npm:publish": "np"
   },
   "np": {
