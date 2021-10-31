@@ -20,7 +20,7 @@
     "jsx": "react-jsx",
     "outDir": "dist",
     "emitDeclarationOnly": false,
-    "declaration": false,
+    "declaration": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
