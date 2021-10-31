@@ -1,5 +1,7 @@
 /// <reference types="react" />
-export interface CardProps {
+import { BoxProps, StackProps } from "@chakra-ui/layout";
+import { StyleProps } from "@chakra-ui/styled-system";
+export interface CardProps extends BoxProps, StackProps, StyleProps {
     children: React.ReactNode;
     title?: string;
     img?: string;
@@ -14,6 +16,6 @@ export interface WithLinkProps {
 export interface CardGridItem extends CardProps {
     key: string;
 }
-export interface CardGridProps {
+export interface CardGridProps extends StyleProps {
     items: CardGridItem[];
 }

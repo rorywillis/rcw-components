@@ -12,11 +12,11 @@ import { CardProps, WithLinkProps } from "../types";
 
 const WithLink = (props: WithLinkProps) =>
   props.url ? (
-    <LinkOverlay as={Link} to={props.url}>
+    <LinkOverlay as={Link} to={props.url} w={"100%"}>
       {props.children}
     </LinkOverlay>
   ) : (
-    <Box>{props.children}</Box>
+    <Box w={"100%"}>{props.children}</Box>
   );
 
 const Card = (props: CardProps) => {
@@ -38,7 +38,7 @@ const Card = (props: CardProps) => {
             <Image w={"100%"} objectFit="cover" src={props.img} fit={"fill"} />
           </AspectRatio>
         )}
-        <Stack p={padding ?? 4} spacing={spacing ?? 2}>
+        <Stack p={padding ?? 4} spacing={spacing ?? 2} w={"100%"}>
           {title && (
             <Box fontWeight={"semibold"} fontSize={"lg"} noOfLines={2}>
               {title}
