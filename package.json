@@ -31,7 +31,7 @@
     "build": "rm -rf ./dist && tsc ./src/components/index.ts --outDir ./dist --declaration --jsx react-jsx --esModuleInterop true",
     "storybook:build": "rm -rf ./dist && tsc && build-storybook --output-dir ./docs",
     "storybook:deploy": "npm run storybook:build && gh-pages -d docs && rm -rf ./docs",
-    "npm:publish": "npm run build && np"
+    "npm:publish": "np"
   },
   "np": {
     "yarn": false,
