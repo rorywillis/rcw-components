@@ -8,6 +8,7 @@ export interface CardProps extends BoxProps, StackProps, StyleProps {
   url?: string;
   spacing?: number;
   padding?: number;
+  [key: string]: any;
 }
 
 export interface WithLinkProps {
@@ -20,4 +21,5 @@ export interface CardGridItem extends CardProps {
 
 export interface CardGridProps extends StyleProps {
   items: CardGridItem[];
+  [key: string]: any;
 }
