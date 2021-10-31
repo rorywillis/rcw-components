@@ -1,6 +1,6 @@
 {
   "name": "rcw-components",
-  "version": "0.1.02",
+  "version": "0.1.03",
   "private": false,
   "files": [
     "dist",
@@ -36,7 +36,7 @@
     "compile": "npm run clean && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__",
     "predeploy": "npm run build-storybook",
     "deploy-storybook": "npm run build-storybook && gh-pages -d storybook-static",
-    "build-storybook": "build-storybook"
+    "build-storybook": "rm -rf ./dist && tsc && build-storybook"
   },
   "eslintConfig": {
     "extends": [

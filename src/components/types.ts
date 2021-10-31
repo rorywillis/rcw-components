@@ -11,7 +11,6 @@ export interface WithLinkProps {
     url?: string;
     children: React.ReactNode;
 }
-
 export interface CardGridItem extends CardProps {
   key: string;
 }
