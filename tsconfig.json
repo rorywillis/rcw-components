@@ -21,8 +21,13 @@
     "outDir": "dist",
     "emitDeclarationOnly": true,
     "declaration": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
   },
-  "include": [
-    "src/components/index.ts"
+  "exclude": [
+    "node_modules"
   ]
 }
