@@ -1,5 +1,11 @@
-import { ChakraProvider, extendTheme, CSSReset } from "@chakra-ui/react";
+import {
+  ThemeProvider,
+  extendTheme,
+  CSSReset,
+  ChakraProvider,
+} from "@chakra-ui/react";
 import { BrowserRouter as Router } from "react-router-dom";
+import { addDecorator } from "@storybook/react";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -26,13 +32,11 @@ const theme = extendTheme({
   },
 });
 
-export const decorators = [
-  (Story) => (
+addDecorator((storyFn) => (
+  <ThemeProvider>
+    <CSSReset />
     <ChakraProvider theme={theme}>
-      <CSSReset />
-      <Router>
-        <Story />
-      </Router>
+      <Router>{storyFn()}</Router>
     </ChakraProvider>
-  ),
-];
+  </ThemeProvider>
+));
